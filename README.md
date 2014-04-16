@@ -17,7 +17,7 @@ First element explain the process globally
 The next element is the container for the select element to select the different plots, there are twelve in total.
 
 ```
-<div id='GCSelect'>
+<div id="GCSelect">
 </div>
 ```
 
