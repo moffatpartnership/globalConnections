@@ -14,10 +14,10 @@ First element explain the process globally
 </div>
 ```
 
-The next element is the selector for the different plots, thee are twelve in total.
+The next element is the container for the select element to select the different plots, there are twelve in total.
 
 ```
-<div id="GCSelect">
+<div id='GCSelect'>
 </div>
 ```
 
@@ -41,7 +41,7 @@ The GSAP Greensock library is currently only used for the Ticker. The library us
 
 The two createjs libraries are used extensively.
 
-You can use the stats display for performance monitoring, uncomment the initial load and jquery lines in the WDViewer.loadInit function, then uncomment the start and stop lines in the frameRender function.
+You can use the stats display for performance monitoring, uncomment the initial load and jquery lines in the GCViewer.loadInit function, then uncomment the start and stop lines in the frameRender function.
 
 #### CSS
 
