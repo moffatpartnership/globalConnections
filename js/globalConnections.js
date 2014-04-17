@@ -49,10 +49,9 @@ select.addEventListener('change', function() {
         // mapItems stuff
         dataload = false;
 
-        $.getJSON('https://api.moffpart.com/api/1/databases/sdnacontent/collections/globalConnectionsReference?q={"title":"'+ plotName + '","batch": '+ customerItems.batch +'}&apiKey=50e55b5fe4b00738efa04da0&callback=?', function(ret) {
+       $.getJSON('https://api.moffpart.com/api/1/results/getHaplogroup?q={"title":"'+ plotName + '","batch": '+ customerItems.batch +'}&c=globalConnectionsReference&callback=?', function(ret) {
 
             plotItems = ret[0];
-            console.log(plotItems)
             parseData();
         });
 
@@ -456,9 +455,6 @@ select.addEventListener('change', function() {
             user.render = false;
         });
 
-
-        // <------ area to add stuff
-
         displayObject.updateCache("source-overlay");
 
     };
@@ -692,10 +688,9 @@ select.addEventListener('change', function() {
 // firstSet
 var resultid = document.getElementById("canvasGlobalConnections").getAttribute("data-global-connections-id");
 
-$.getJSON('https://api.moffpart.com/api/1/databases/sdnacontent/collections/amaGlobalConnections/'+ resultid +'?apiKey=50e55b5fe4b00738efa04da0&callback=?', function(ret) {
+$.getJSON('https://api.moffpart.com/api/1/results/getAMAResults/'+ resultid +'?c=amaGlobalConnections&callback=?', function(ret) {
 
     customerItems = ret;
-    console.log(customerItems)
     //Init
     GCViewer.loadInit();
 });
